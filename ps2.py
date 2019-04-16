@@ -316,7 +316,7 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
     for j in range(num_trials):
         master_room = RectangularRoom(width,height)
         """comment this"""
-        #anim = ps2_visualize.RobotVisualization(num_robots, width, height)
+        anim = ps2_visualize.RobotVisualization(num_robots, width, height)
         
         for i in range(num_robots):
             robs[i]=robot_type(master_room, speed)
@@ -328,18 +328,18 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
                 robs[i].updatePositionAndClean()
 
             """"""
-            #anim.update(master_room, robs.values())
+            anim.update(master_room, robs.values())
             
             time+=1
         """"""   
-        #anim.done()
+        anim.done()
         
         times.append(time)
     return np.mean(times)
             
 
 # Uncomment this line to see how much your simulation takes on average
-#print(runSimulation(1, 1.0, 5, 5, 1, 30, StandardRobot))
+print(runSimulation(5, 1.0, 5, 5, 1, 30, StandardRobot))
 
 
 # === Problem 5
