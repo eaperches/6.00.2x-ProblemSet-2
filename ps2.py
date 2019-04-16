@@ -11,7 +11,7 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 import numpy as np
 
-random.seed(0)
+
 ##################
 ## Comment/uncomment the relevant lines, depending on which version of Python you have
 ##################
@@ -339,7 +339,7 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
             
 
 # Uncomment this line to see how much your simulation takes on average
-print(runSimulation(5, 1.0, 5, 5, 1, 30, StandardRobot))
+print(runSimulation(5, 1.0, 10, 10, 1, 30, StandardRobot))
 
 
 # === Problem 5
